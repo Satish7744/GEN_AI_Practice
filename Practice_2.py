@@ -2,12 +2,11 @@ import time
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Load both models
+
 model = SentenceTransformer('all-MiniLM-L6-v2')
 model_mpnet = SentenceTransformer('all-mpnet-base-v2')
 print("Both models loaded successfully!")
 
-# Same custom documents from Exercise 1
 my_documents = [
     "Python is widely used for data science and machine learning.",
     "Neural networks are inspired by the structure of the human brain.",
@@ -21,7 +20,6 @@ my_documents = [
     "Climate change is causing more frequent extreme weather events."
 ]
 
-# Encode with both models, timing each
 start = time.time()
 minilm_embeddings = model.encode(my_documents)
 minilm_time = time.time() - start

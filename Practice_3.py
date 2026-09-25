@@ -1,3 +1,9 @@
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
+
+model = SentenceTransformer('all-MiniLM-L6-v2')
+print("Model loaded successfully!")
+
 # 5 Q&A pairs for our FAQ bot
 faq = [
     ("What is machine learning?", "Machine learning is a field of AI where models learn patterns from data instead of being explicitly programmed."),
@@ -10,7 +16,6 @@ faq = [
 faq_questions = [q for q, a in faq]
 faq_answers = [a for q, a in faq]
 
-# Encode all FAQ questions once
 faq_embeddings = model.encode(faq_questions)
 
 def faq_bot(user_question, threshold=0.45):
@@ -28,8 +33,7 @@ def faq_bot(user_question, threshold=0.45):
         print(f"(matched: '{faq_questions[best_idx]}', score: {best_score:.3f})")
     print()
 
-# Try it with questions phrased differently from the stored ones
 faq_bot("How can I set up Python on my laptop?")
 faq_bot("What's a text vector used for?")
 faq_bot("Is Hugging Face free to use?")
-faq_bot("What's the weather like today?")  # should trigger the 'don't know' fallback
+faq_bot("What's the weather like today?")
