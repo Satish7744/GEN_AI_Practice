@@ -1,4 +1,4 @@
-#Word2Vec with a bigger custom corpus
+# Word2Vec with a bigger custom corpus
 
 from gensim.models import Word2Vec
 
