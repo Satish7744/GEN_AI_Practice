@@ -1,0 +1,8 @@
+Embeddings and Vector Search in Practice
+
+Modern search engines increasingly rely on embeddings rather than simple keyword matching.
+An embedding model converts a search query into the same vector space as the stored documents,
+allowing the system to find results that match the meaning of the query, not just its exact words.
+
+This is especially powerful for customer support systems, where a user might phrase a question very
+differently from how it appears in a help article, yet still expect to find the right answer.
