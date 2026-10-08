@@ -1,4 +1,4 @@
-#Build a word similarity checker function
+# Build a word similarity checker function
 
 from gensim.models import Word2Vec
 
