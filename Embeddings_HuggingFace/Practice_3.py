@@ -4,7 +4,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 model = SentenceTransformer('all-MiniLM-L6-v2')
 print("Model loaded successfully!")
 
-# 5 Q&A pairs for our FAQ bot
 faq = [
     ("What is machine learning?", "Machine learning is a field of AI where models learn patterns from data instead of being explicitly programmed."),
     ("How do I install Python?", "Download Python from python.org and follow the installer instructions for your operating system."),
