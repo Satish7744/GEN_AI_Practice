@@ -3,7 +3,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-# A new, bigger "document" database spanning multiple topics
+
 my_documents = [
     "Python is widely used for data science and machine learning.",
     "Neural networks are inspired by the structure of the human brain.",
